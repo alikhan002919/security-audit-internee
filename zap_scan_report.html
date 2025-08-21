@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OWASP ZAP Scan Report</title>
+</head>
+<body>
+  <h1>OWASP ZAP Scan Report - Internee.pk</h1>
+  <p><strong>Scan Date:</strong> August 20, 2025</p>
+  
+  <h2>Summary</h2>
+  <ul>
+    <li>High Risk: 1 (SQL Injection at /login)</li>
+    <li>Medium Risk: 2 (Reflected XSS at /search, Missing Security Headers)</li>
+    <li>Low Risk: 3 (Information Disclosure, Cookie without HttpOnly, Directory Listing)</li>
+  </ul>
+
+  <h2>Details</h2>
+  <h3>SQL Injection</h3>
+  <p>Parameter: username  
+  Payload: <code>' OR '1'='1 --</code>  
+  Impact: Allows authentication bypass.</p>
+
+  <h3>XSS Vulnerability</h3>
+  <p>Parameter: q (search box)  
+  Payload: <code>&lt;script&gt;alert('XSS')&lt;/script&gt;</code></p>
+</body>
+</html>
